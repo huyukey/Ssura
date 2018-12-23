@@ -76,6 +76,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="Wcw-Zw-0Yr" secondAttribute="trailing" constant="-7" id="tJb-br-DTu"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="boardStatusBadge" destination="t5P-rG-CDv" id="iGP-LW-WhS"/>
+                                    <outlet property="boardWriteDate" destination="Wcw-Zw-0Yr" id="8Uw-YE-dfJ"/>
+                                    <outlet property="boardWriteTitle" destination="9E7-Wz-53P" id="4JN-M7-eMa"/>
+                                    <outlet property="boardWriterAvatar" destination="QPJ-6v-LPb" id="n2p-d2-h98"/>
+                                    <outlet property="boardWriterName" destination="DL0-Kj-bRD" id="mHq-AO-Pj6"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

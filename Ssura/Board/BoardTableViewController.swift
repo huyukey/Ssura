@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
+struct BoardPost {
+    var title: String?
+    var postDate: Date?
+    var writerAvatarImage: String? = ""
+    
+}
 
 class BoardTableViewController: UITableViewController {
-
+    var posts: [BoardPost] = []
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,7 +34,7 @@ class BoardTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,15 +42,15 @@ class BoardTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BoardCell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
